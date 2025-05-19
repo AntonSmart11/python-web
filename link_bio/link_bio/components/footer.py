@@ -5,10 +5,16 @@ from link_bio.styles.colors import TextColor as TextColor
 
 def footer() -> rx.Component:
     return rx.vstack(
-        rx.image(src='favicon.ico'),
+        rx.image(
+            src='icon.webp',
+            height=Size.VERY_BIG.value,
+            weight=Size.VERY_BIG.value,
+            alt='Logotipo de AntonSmart. Una "A" y una "S" juntas divididas por una "diagonal".'
+        ),
         rx.text(
             f'© 2023 - {datetime.date.today().year} Antonio Ovando - Página de Enlaces',
-            font_size=Size.MEDIUM.value
+            font_size=Size.MEDIUM.value,
+            text_align='center',
         ),
         rx.text(
             'Desarrollador FullStack',
@@ -16,6 +22,7 @@ def footer() -> rx.Component:
         align='center',
         margin_bottom=Size.BIG.value,
         padding_bottom=Size.BIG.value,
+        padding_x=Size.BIG.value,
         color=TextColor.FOOTER.value,
         spacing='0',
     )
